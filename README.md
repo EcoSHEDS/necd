@@ -40,3 +40,7 @@ See `impoundments/README.md` for more details.
 The `tidal/` folder contains scripts for generating a spatial layer of tidal influence zones. This layer is used to identify stream temperature monitoring locations influenced by tidal exchanges.
 
 See `tidal/README.md` for more details.
+
+## License
+
+See `LICENSE` file.
