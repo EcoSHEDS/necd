@@ -22,7 +22,6 @@ NECD includes the following data products:
 
 - [Catchment Delineation]
 - [Basin Characteristics]
-- [Daymet]
 - [Impoundment Influence Zones]
 - [Tidal Influence Zones]
 

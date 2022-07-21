@@ -31,6 +31,8 @@ The `daymet/` folder contains scripts for generating daily timeseries of air tem
 
 See `daymet/README.md` for more details.
 
+Note that this data product is not available for download due to its large volume.
+
 ### Impoundment Influence Zones
 
 The `impoundments/` folder contains scripts for creating a spatial layer indicating the zones of impoundment influence. This layer is used to identify stream temperature monitoring locations that are likely to be influenced by upstream impoundments.
