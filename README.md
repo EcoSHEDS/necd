@@ -1,8 +1,6 @@
 EcoSHEDS Northeast Catchment Delineation (NECD)
 ===============================================
 
-## Summary
-
 This repo contains code for generating the EcoSHEDS Northeast Catchment Delineation (NECD) and associated datasets and GIS layers.
 
 The NECD is a high resolution catchment delineation of the northeast U.S. It was created in 2015 by Kyle O'Neil to support the EcoSHEDS northeast stream temperature and brook trout occupancy models.
