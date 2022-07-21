@@ -14,7 +14,9 @@ description: "Documentation for the EcoSHEDS Northeast Catchment Delineation (NE
 
 # Introduction
 
-The EcoSHEDS Northeast Catchment Delineation (NECD)^[NECD was formerly called the National Hydrography Dataset High Resolution Delineation Version 2 (NHDHRDV2). It has been renamed to avoid confusion with the [USGS NHDPlus High Resolution (HR)](https://www.usgs.gov/national-hydrography/nhdplus-high-resolution) dataset, which was not yet available when this dataset was created.] is a high resolution catchment delineation of the northeast U.S. It was created in 2015 by Kyle O'Neil to support the EcoSHEDS northeast stream temperature and brook trout occupancy models. In addition to the flowlines and catchment polygons, NECD includes a number of additional data products created to support the EcoSHEDS northeast stream temperature and brook trout occupancy models such as landscape and climate metrics as well as zones of impoundment and tidal influence.
+The [EcoSHEDS](https://usgs.gov/apps/ecosheds/) Northeast Catchment Delineation (NECD)^[NECD was formerly called the National Hydrography Dataset High Resolution Delineation Version 2 (NHDHRDV2). It has been renamed to avoid confusion with the [USGS NHDPlus High Resolution (HR)](https://www.usgs.gov/national-hydrography/nhdplus-high-resolution) dataset, which was not yet available when this dataset was created.] is a high resolution catchment delineation of the northeast U.S. It was created in 2015 by Kyle O'Neil to support the EcoSHEDS northeast stream temperature and brook trout occupancy models. In addition to the flowlines and catchment polygons, NECD includes a number of additional data products created to support the EcoSHEDS northeast stream temperature and brook trout occupancy models such as landscape and climate metrics as well as zones of impoundment and tidal influence.
+
+This dataset was developed as part of the [EcoSHEDS](https://usgs.gov/apps/ecosheds/) project.
 
 NECD includes the following data products:
 
