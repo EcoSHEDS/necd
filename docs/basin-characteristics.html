@@ -98,7 +98,65 @@
             <section class="normal" id="section-">
 <div id="basin-characteristics" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">Section 3</span> Basin Characteristics<a href="basin-characteristics.html#basin-characteristics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>The basin characteristics (aka covariates) dataset provides a variety of landscape metrics associated with the NECD catchments. These covariates were computed to support the EcoSHEDS stream temperature and brook trout occupancy model. The available variables include:</p>
+<p>The basin characteristics (aka covariates) dataset provides a variety of landscape and climate metrics associated with the NECD catchments. These covariates were computed to support the EcoSHEDS stream temperature and brook trout occupancy model. A full list of available variables is provided below.</p>
+<p>Each variable was computed both locally within each catchment area, as well as across the entire drainage area of each catchment (i.e., the local catchment plus all upstream catchments). In addition, each variable was computed both across the entire catchment area as well as within riparian buffers of varying distances (50, 100, 200 ft) of the catchment flowlines.</p>
+<p>The covariate files can be joined to the <a href="catchment-delineation.html#catchment-delineation">Catchment Delineation</a> shapefiles using the mutual <code>featureid</code> column.</p>
+<p><strong>Documentation:</strong> The following spreadsheet contains a detailed list of the covariates including descriptions, units, and data sources.</p>
+<ul>
+<li><a href="./downloads/EcoSHEDS%20NECD%20Covariates%20List.xlsx">EcoSHEDS NECD Covariates List.xlsx</a></li>
+</ul>
+<p><strong>Downloads:</strong> the covariate datasets are available for download in pre-staged HUC2 regions (corresponding to the <a href="catchment-delineation.html#catchment-delineation">Catchment Delineation</a> shapefiles)</p>
+<ul>
+<li><a href="https://ecosheds.s3.amazonaws.com/necd/covariates/covariates_01.zip">covariates_01.zip</a>: Region 01</li>
+<li><a href="https://ecosheds.s3.amazonaws.com/necd/covariates/covariates_02.zip">covariates_02.zip</a>: Region 02</li>
+<li><a href="https://ecosheds.s3.amazonaws.com/necd/covariates/covariates_03.zip">covariates_03.zip</a>: Region 03</li>
+<li><a href="https://ecosheds.s3.amazonaws.com/necd/covariates/covariates_04.zip">covariates_04.zip</a>: Region 04</li>
+<li><a href="https://ecosheds.s3.amazonaws.com/necd/covariates/covariates_05.zip">covariates_05.zip</a>: Region 05</li>
+<li><a href="https://ecosheds.s3.amazonaws.com/necd/covariates/covariates_06.zip">covariates_06.zip</a>: Region 06</li>
+</ul>
+<p>Each zip file contains four files:</p>
+<ul>
+<li><code>Catchments##.csv</code>: values computed over entire catchment polygons</li>
+<li><code>zonalStatsForDB_riparianBufferDetailed50ft_##.csv</code>: values computed within 50 ft riparian buffer</li>
+<li><code>zonalStatsForDB_riparianBufferDetailed100ft_##.csv</code>: values computed within 100 ft riparian buffer</li>
+<li><code>zonalStatsForDB_riparianBufferDetailed200ft_##.csv</code>: values computed within 200 ft riparian buffer</li>
+</ul>
+<p>Each csv file contains the following columns:</p>
+<table>
+<colgroup>
+<col width="11%" />
+<col width="88%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Column</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">featureid</td>
+<td align="left">catchment ID (joins to FEATUREID attribute in catchments shapefile)</td>
+</tr>
+<tr class="even">
+<td align="left">variable</td>
+<td align="left">variable name</td>
+</tr>
+<tr class="odd">
+<td align="left">value</td>
+<td align="left">value</td>
+</tr>
+<tr class="even">
+<td align="left">zone</td>
+<td align="left"><code>local</code> = value computed within catchment polygon<br><code>upstream</code> = value computed within this and all upstream catchments</td>
+</tr>
+<tr class="odd">
+<td align="left">riparian_distance_ft</td>
+<td align="left">riparian buffer distance (ft)<br>if <code>NA</code> then value computed over entire catchment, otherwise value is computed only within this distance from the flowlines</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable List:</strong> this table lists the available variables (see <a href="./downloads/EcoSHEDS%20NECD%20Covariates%20List.xlsx">EcoSHEDS NECD Covariates List.xlsx</a> for more details):</p>
 <table>
 <colgroup>
 <col width="7%" />
@@ -515,61 +573,6 @@
 <td align="left">mm</td>
 <td align="left">Average September Precipitation</td>
 <td align="left">PRISM Climate Group</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Documentation:</strong> The following spreadsheet contains a more detailed list of the covariates.</p>
-<ul>
-<li><a href="./downloads/EcoSHEDS%20NECD%20Covariates%20List.xlsx">EcoSHEDS NECD Covariates List.xlsx</a></li>
-</ul>
-<p><strong>Downloads:</strong> the covariate datasets are available for download in pre-staged HUC2 regions (corresponding to the <a href="catchment-delineation.html#catchment-delineation">Catchment Delineation</a> shapefiles)</p>
-<ul>
-<li><a href="https://ecosheds.s3.amazonaws.com/necd/covariates/covariates_01.zip">covariates_01.zip</a>: Region 01</li>
-<li><a href="https://ecosheds.s3.amazonaws.com/necd/covariates/covariates_02.zip">covariates_02.zip</a>: Region 02</li>
-<li><a href="https://ecosheds.s3.amazonaws.com/necd/covariates/covariates_03.zip">covariates_03.zip</a>: Region 03</li>
-<li><a href="https://ecosheds.s3.amazonaws.com/necd/covariates/covariates_04.zip">covariates_04.zip</a>: Region 04</li>
-<li><a href="https://ecosheds.s3.amazonaws.com/necd/covariates/covariates_05.zip">covariates_05.zip</a>: Region 05</li>
-<li><a href="https://ecosheds.s3.amazonaws.com/necd/covariates/covariates_06.zip">covariates_06.zip</a>: Region 06</li>
-</ul>
-<p>Each zip file contains four files:</p>
-<ul>
-<li><code>Catchments##.csv</code>: values computed over entire catchment polygons</li>
-<li><code>zonalStatsForDB_riparianBufferDetailed50ft_##.csv</code>: values computed within 50 ft riparian buffer</li>
-<li><code>zonalStatsForDB_riparianBufferDetailed100ft_##.csv</code>: values computed within 100 ft riparian buffer</li>
-<li><code>zonalStatsForDB_riparianBufferDetailed200ft_##.csv</code>: values computed within 200 ft riparian buffer</li>
-</ul>
-<p>Each csv file contains the following columns:</p>
-<table>
-<colgroup>
-<col width="11%" />
-<col width="88%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Column</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">featureid</td>
-<td align="left">catchment ID (joins to FEATUREID attribute in catchments shapefile)</td>
-</tr>
-<tr class="even">
-<td align="left">variable</td>
-<td align="left">variable name</td>
-</tr>
-<tr class="odd">
-<td align="left">value</td>
-<td align="left">value</td>
-</tr>
-<tr class="even">
-<td align="left">zone</td>
-<td align="left"><code>local</code> = value computed within catchment polygon<br><code>upstream</code> = value computed within this and all upstream catchments</td>
-</tr>
-<tr class="odd">
-<td align="left">riparian_distance_ft</td>
-<td align="left">riparian buffer distance (ft)<br>if <code>NA</code> then value computed over entire catchment, otherwise value is computed only within this distance from the flowlines</td>
 </tr>
 </tbody>
 </table>

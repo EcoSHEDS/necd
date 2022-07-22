@@ -1,18 +1,12 @@
 # Basin Characteristics
 
-The basin characteristics (aka covariates) dataset provides a variety of landscape metrics associated with the NECD catchments. These covariates were computed to support the EcoSHEDS stream temperature and brook trout occupancy model. The available variables include:
+The basin characteristics (aka covariates) dataset provides a variety of landscape and climate metrics associated with the NECD catchments. These covariates were computed to support the EcoSHEDS stream temperature and brook trout occupancy model. A full list of available variables is provided below.
 
-```{r cov-list, message=FALSE}
-covariates <- read_csv("../covariates/EcoSHEDS NECD Covariates List.csv", col_types = cols(.default = col_character())) |> 
-  select(group = Group, name = Name, units = `Final Units`, description = `Data Layer`, data_source = `Data Source`)
-covariates |> 
-  mutate(group = factor(group, levels = c("Land Cover", "Human Impacts", "Topography", "Geology", "Climate"))) |> 
-  arrange(group, name) |> 
-  knitr::kable(align = "lllll", col.names = c("Group", "Variable", "Units", "Description", "Source"))
-```
+Each variable was computed both locally within each catchment area, as well as across the entire drainage area of each catchment (i.e., the local catchment plus all upstream catchments). In addition, each variable was computed both across the entire catchment area as well as within riparian buffers of varying distances (50, 100, 200 ft) of the catchment flowlines. 
 
+The covariate files can be joined to the [Catchment Delineation] shapefiles using the mutual `featureid` column.
 
-**Documentation:** The following spreadsheet contains a more detailed list of the covariates. 
+**Documentation:** The following spreadsheet contains a detailed list of the covariates including descriptions, units, and data sources. 
 
 ```{r cov-copy}
 invisible(file.copy("../covariates/EcoSHEDS NECD Covariates List.xlsx", "./downloads/EcoSHEDS NECD Covariates List.xlsx"))
@@ -50,3 +44,13 @@ tibble::tribble(
   knitr::kable(align = "ll", col.names = c("Column", "Description"))
 ```
 
+**Variable List:** this table lists the available variables (see [EcoSHEDS NECD Covariates List.xlsx](./downloads/EcoSHEDS NECD Covariates List.xlsx) for more details):
+
+```{r cov-list, message=FALSE}
+covariates <- read_csv("../covariates/EcoSHEDS NECD Covariates List.csv", col_types = cols(.default = col_character())) |> 
+  select(group = Group, name = Name, units = `Final Units`, description = `Data Layer`, data_source = `Data Source`)
+covariates |> 
+  mutate(group = factor(group, levels = c("Land Cover", "Human Impacts", "Topography", "Geology", "Climate"))) |> 
+  arrange(group, name) |> 
+  knitr::kable(align = "lllll", col.names = c("Group", "Variable", "Units", "Description", "Source"))
+```
