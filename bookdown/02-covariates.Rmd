@@ -1,3 +1,52 @@
 # Basin Characteristics
 
-Work in progress...
+The basin characteristics (aka covariates) dataset provides a variety of landscape metrics associated with the NECD catchments. These covariates were computed to support the EcoSHEDS stream temperature and brook trout occupancy model. The available variables include:
+
+```{r cov-list, message=FALSE}
+covariates <- read_csv("../covariates/EcoSHEDS NECD Covariates List.csv", col_types = cols(.default = col_character())) |> 
+  select(group = Group, name = Name, units = `Final Units`, description = `Data Layer`, data_source = `Data Source`)
+covariates |> 
+  mutate(group = factor(group, levels = c("Land Cover", "Human Impacts", "Topography", "Geology", "Climate"))) |> 
+  arrange(group, name) |> 
+  knitr::kable(align = "lllll", col.names = c("Group", "Variable", "Units", "Description", "Source"))
+```
+
+
+**Documentation:** The following spreadsheet contains a more detailed list of the covariates. 
+
+```{r cov-copy}
+invisible(file.copy("../covariates/EcoSHEDS NECD Covariates List.xlsx", "./downloads/EcoSHEDS NECD Covariates List.xlsx"))
+```
+
+- [EcoSHEDS NECD Covariates List.xlsx](./downloads/EcoSHEDS NECD Covariates List.xlsx)
+
+**Downloads:** the covariate datasets are available for download in pre-staged HUC2 regions (corresponding to the [Catchment Delineation] shapefiles)
+
+- [covariates_01.zip](`r paste0(base_url, "covariates/covariates_01.zip")`): Region 01
+- [covariates_02.zip](`r paste0(base_url, "covariates/covariates_02.zip")`): Region 02
+- [covariates_03.zip](`r paste0(base_url, "covariates/covariates_03.zip")`): Region 03
+- [covariates_04.zip](`r paste0(base_url, "covariates/covariates_04.zip")`): Region 04
+- [covariates_05.zip](`r paste0(base_url, "covariates/covariates_05.zip")`): Region 05
+- [covariates_06.zip](`r paste0(base_url, "covariates/covariates_06.zip")`): Region 06
+
+Each zip file contains four files:
+
+- `Catchments##.csv`: values computed over entire catchment polygons
+- `zonalStatsForDB_riparianBufferDetailed50ft_##.csv`: values computed within 50 ft riparian buffer
+- `zonalStatsForDB_riparianBufferDetailed100ft_##.csv`: values computed within 100 ft riparian buffer
+- `zonalStatsForDB_riparianBufferDetailed200ft_##.csv`: values computed within 200 ft riparian buffer
+
+Each csv file contains the following columns:
+
+```{r cov-columns}
+tibble::tribble(
+  ~name, ~description,
+  "featureid", "catchment ID (joins to FEATUREID attribute in catchments shapefile)",
+  "variable", "variable name",
+  "value", "value",
+  "zone", "`local` = value computed within catchment polygon<br>`upstream` = value computed within this and all upstream catchments",
+  "riparian_distance_ft", "riparian buffer distance (ft)<br>if `NA` then value computed over entire catchment, otherwise value is computed only within this distance from the flowlines"
+) |> 
+  knitr::kable(align = "ll", col.names = c("Column", "Description"))
+```
+

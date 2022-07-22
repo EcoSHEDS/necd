@@ -19,7 +19,7 @@ activateThreshold <- TRUE
 
 missingDataThreshold <- 80
 
-conversionFactorFilePath <- "C:/KPONEIL/GitHub/projects/shedsData/basinCharacteristics/Covariate Data Status - High Res Delineation.csv"
+conversionFactorFilePath <- "C:/KPONEIL/GitHub/projects/shedsData/basinCharacteristics/EcoSHEDS NECD Covariates List.csv"
 
 # ========================
 # Read user-defined inputs

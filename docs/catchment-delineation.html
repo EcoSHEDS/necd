@@ -98,8 +98,50 @@
             <section class="normal" id="section-">
 <div id="catchment-delineation" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Section 2</span> Catchment Delineation<a href="catchment-delineation.html#catchment-delineation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Work in progress…</p>
+<div class="figure">
+<img src="img/catchments.png" alt="" />
+<p class="caption">Catchment Delineation</p>
+</div>
+<p>The EcoSHEDS Northeast Catchment Delineation (NECD) is a series of geospatial layers representing hydrologic catchments and flowlines spanning the northeast region of the United States. The NECD sought to address specific aspects of the national hydrography products that were available at the time this delineation was created. Specifically, improved spatial resolution and consistency were the focus of the development of NECD. Another goal of this product was to capture small headwater streams omitted by existing products such as the medium resolution catchments in NHDPlus Version 2. Representing these streams can be critical to understanding key ecological interests.</p>
+<div class="figure">
+<img src="img/catchments-local.png" alt="" />
+<p class="caption">Closer Look at Catchment Delineation</p>
+</div>
+<p>The NECD catchment delineation process was based on NHD high resolution flowlines and a 30m resolution digital elevation model (DEM). At the time it was developed, there were no large scale catchment products derived from these flowlines<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>. By using the NHD flowlines, the NECD data products include attribute fields indicating routing paths, which can be used to establish the network structure.</p>
+<p>The data products include two sets of flowlines: detailed and truncated. The detailed flowlines are the NHD high resolution flowlines that served as the starting point for this delineation. The truncated flowlines are a subset of the detailed flowlines that only include stream segments with a drainage area of more than 0.75 km<sup>2</sup>. The truncated flowlines were then used to delineate the individual catchments. This truncation process was used to ensure consistency in the spatial resolution of the flowlines across the entire region.</p>
+<p>In both the catchment and flowline layers, the <code>FEATUREID</code> attribute is used as the unique ID assigned to each catchment.</p>
+<p>More details about the motivation and methodology used to develop the NECD data products as well as definitions of each attribute field are provided in the documentation:</p>
+<p><strong>Documentation:</strong></p>
+<ul>
+<li><a href="./downloads/EcoSHEDS%20NECD%20Catchment%20Delineation%20Documentation.docx">EcoSHEDS NECD Catchment Delineation Documentation.docx</a></li>
+</ul>
+<p><strong>Downloads:</strong> the NECD shapefiles are available for download in pre-staged HUC2 regions (see map below for region boundaries)</p>
+<ul>
+<li><a href="https://ecosheds.s3.amazonaws.com/necd/delineation/spatial_01.zip">spatial_01.zip</a>: Region 01</li>
+<li><a href="https://ecosheds.s3.amazonaws.com/necd/delineation/spatial_02.zip">spatial_02.zip</a>: Region 02</li>
+<li><a href="https://ecosheds.s3.amazonaws.com/necd/delineation/spatial_03.zip">spatial_03.zip</a>: Region 03</li>
+<li><a href="https://ecosheds.s3.amazonaws.com/necd/delineation/spatial_04.zip">spatial_04.zip</a>: Region 04</li>
+<li><a href="https://ecosheds.s3.amazonaws.com/necd/delineation/spatial_05.zip">spatial_05.zip</a>: Region 05</li>
+<li><a href="https://ecosheds.s3.amazonaws.com/necd/delineation/spatial_06.zip">spatial_06.zip</a>: Region 06</li>
+</ul>
+<p>Each zip file contains the following shapefiles:</p>
+<ul>
+<li><code>Catchments##.shp</code>: catchment polygons</li>
+<li><code>detailedFlowlines##.shp</code>: detailed flowlines (from NHD)</li>
+<li><code>truncatedFlowlines##.shp</code>: truncated flowlines (drainage area &gt;= 0.75 km<sup>2</sup>)</li>
+<li><code>regionboundary##.shp</code>: region boundary</li>
+</ul>
+<div class="figure">
+<img src="img/region-boundary.png" alt="" />
+<p class="caption">Region Boundaries</p>
+</div>
 
+</div>
+<div class="footnotes">
+<hr />
+<ol start="2">
+<li id="fn2"><p>The NHDPlus High Resolution (HR) dataset now provides delineated catchments, but these were not available when NECD was developed<a href="catchment-delineation.html#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

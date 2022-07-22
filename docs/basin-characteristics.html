@@ -98,7 +98,481 @@
             <section class="normal" id="section-">
 <div id="basin-characteristics" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">Section 3</span> Basin Characteristics<a href="basin-characteristics.html#basin-characteristics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Work in progress…</p>
+<p>The basin characteristics (aka covariates) dataset provides a variety of landscape metrics associated with the NECD catchments. These covariates were computed to support the EcoSHEDS stream temperature and brook trout occupancy model. The available variables include:</p>
+<table>
+<colgroup>
+<col width="7%" />
+<col width="7%" />
+<col width="13%" />
+<col width="22%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Group</th>
+<th align="left">Variable</th>
+<th align="left">Units</th>
+<th align="left">Description</th>
+<th align="left">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Land Cover</td>
+<td align="left">agriculture</td>
+<td align="left">%</td>
+<td align="left">Percent Agriculture</td>
+<td align="left">National Land Cover Database (NLCD) - Land Cover</td>
+</tr>
+<tr class="even">
+<td align="left">Land Cover</td>
+<td align="left">alloffnet</td>
+<td align="left">%</td>
+<td align="left">Off Stream Network Water Bodies</td>
+<td align="left">Fish &amp; Wildlife Service (FWS) Nat ional Wetlands Inventory</td>
+</tr>
+<tr class="odd">
+<td align="left">Land Cover</td>
+<td align="left">allonnet</td>
+<td align="left">%</td>
+<td align="left">On Stream Network Water Bodies</td>
+<td align="left">Fish &amp; Wildlife Service (FWS) Nat ional Wetlands Inventory</td>
+</tr>
+<tr class="even">
+<td align="left">Land Cover</td>
+<td align="left">devel_hi</td>
+<td align="left">%</td>
+<td align="left">Percent Developed, High Intensity</td>
+<td align="left">National Land Cover Database (NLCD) - Land Cover</td>
+</tr>
+<tr class="odd">
+<td align="left">Land Cover</td>
+<td align="left">devel_low</td>
+<td align="left">%</td>
+<td align="left">Percent Developed, Low Intensity</td>
+<td align="left">National Land Cover Database (NLCD) - Land Cover</td>
+</tr>
+<tr class="even">
+<td align="left">Land Cover</td>
+<td align="left">devel_med</td>
+<td align="left">%</td>
+<td align="left">Percent Developed, Medium Intensity</td>
+<td align="left">National Land Cover Database (NLCD) - Land Cover</td>
+</tr>
+<tr class="odd">
+<td align="left">Land Cover</td>
+<td align="left">devel_opn</td>
+<td align="left">%</td>
+<td align="left">Percent Developed, Open</td>
+<td align="left">National Land Cover Database (NLCD) - Land Cover</td>
+</tr>
+<tr class="even">
+<td align="left">Land Cover</td>
+<td align="left">developed</td>
+<td align="left">%</td>
+<td align="left">Percent Developed</td>
+<td align="left">National Land Cover Database (NLCD) - Land Cover</td>
+</tr>
+<tr class="odd">
+<td align="left">Land Cover</td>
+<td align="left">forest</td>
+<td align="left">%</td>
+<td align="left">Percent Forest</td>
+<td align="left">National Land Cover Database (NLCD) - Land Cover</td>
+</tr>
+<tr class="even">
+<td align="left">Land Cover</td>
+<td align="left">forest_decid</td>
+<td align="left">%</td>
+<td align="left">Percent Deciduous Forest</td>
+<td align="left">National Land Cover Database (NLCD) - Land Cover</td>
+</tr>
+<tr class="odd">
+<td align="left">Land Cover</td>
+<td align="left">forest_evgrn</td>
+<td align="left">%</td>
+<td align="left">Percent Evergreen Forest</td>
+<td align="left">National Land Cover Database (NLCD) - Land Cover</td>
+</tr>
+<tr class="even">
+<td align="left">Land Cover</td>
+<td align="left">forest_mixed</td>
+<td align="left">%</td>
+<td align="left">Percent Mixed Forest</td>
+<td align="left">National Land Cover Database (NLCD) - Land Cover</td>
+</tr>
+<tr class="odd">
+<td align="left">Land Cover</td>
+<td align="left">fwsopenwater</td>
+<td align="left">%</td>
+<td align="left">Percent Open Water</td>
+<td align="left">Fish &amp; Wildlife Service (FWS) Nat ional Wetlands Inventory</td>
+</tr>
+<tr class="even">
+<td align="left">Land Cover</td>
+<td align="left">fwswetlands</td>
+<td align="left">%</td>
+<td align="left">Percent Wetland</td>
+<td align="left">Fish &amp; Wildlife Service (FWS) Nat ional Wetlands Inventory</td>
+</tr>
+<tr class="odd">
+<td align="left">Land Cover</td>
+<td align="left">herbaceous</td>
+<td align="left">%</td>
+<td align="left">Percent Herbaceous</td>
+<td align="left">National Land Cover Database (NLCD) - Land Cover</td>
+</tr>
+<tr class="even">
+<td align="left">Land Cover</td>
+<td align="left">impervious</td>
+<td align="left">%</td>
+<td align="left">Percent Impervious</td>
+<td align="left">National Land Cover Database (NLCD) - Impervious</td>
+</tr>
+<tr class="odd">
+<td align="left">Land Cover</td>
+<td align="left">openoffnet</td>
+<td align="left">%</td>
+<td align="left">Off Stream Network Open Water</td>
+<td align="left">Fish &amp; Wildlife Service (FWS) Nat ional Wetlands Inventory</td>
+</tr>
+<tr class="even">
+<td align="left">Land Cover</td>
+<td align="left">openonnet</td>
+<td align="left">%</td>
+<td align="left">On Stream Network Open Water</td>
+<td align="left">Fish &amp; Wildlife Service (FWS) Nat ional Wetlands Inventory</td>
+</tr>
+<tr class="odd">
+<td align="left">Land Cover</td>
+<td align="left">tree_canopy</td>
+<td align="left">%</td>
+<td align="left">Percent Tree Canopy</td>
+<td align="left">National Land Cover Database (NLCD) - Tree Canopy</td>
+</tr>
+<tr class="even">
+<td align="left">Land Cover</td>
+<td align="left">undev_forest</td>
+<td align="left">%</td>
+<td align="left">Percent Undeveloped Forest</td>
+<td align="left">National Land Cover Database (NLCD) - Land Cover</td>
+</tr>
+<tr class="odd">
+<td align="left">Land Cover</td>
+<td align="left">water</td>
+<td align="left">%</td>
+<td align="left">Percent Open Water</td>
+<td align="left">National Land Cover Database (NLCD) - Land Cover</td>
+</tr>
+<tr class="even">
+<td align="left">Land Cover</td>
+<td align="left">wetland</td>
+<td align="left">%</td>
+<td align="left">Percent Wetland</td>
+<td align="left">National Land Cover Database (NLCD) - Land Cover</td>
+</tr>
+<tr class="odd">
+<td align="left">Human Impacts</td>
+<td align="left">deg_barr_1</td>
+<td align="left">%</td>
+<td align="left">TNC Dams - Degree Barrier 1</td>
+<td align="left">TNC Dams dataset snapped to high res flowlines (Umass Land Eco Lab)</td>
+</tr>
+<tr class="even">
+<td align="left">Human Impacts</td>
+<td align="left">deg_barr_2</td>
+<td align="left">%</td>
+<td align="left">TNC Dams - Degree Barrier 2</td>
+<td align="left">TNC Dams dataset snapped to high res flowlines (Umass Land Eco Lab)</td>
+</tr>
+<tr class="odd">
+<td align="left">Human Impacts</td>
+<td align="left">deg_barr_3</td>
+<td align="left">%</td>
+<td align="left">TNC Dams - Degree Barrier 3</td>
+<td align="left">TNC Dams dataset snapped to high res flowlines (Umass Land Eco Lab)</td>
+</tr>
+<tr class="even">
+<td align="left">Human Impacts</td>
+<td align="left">deg_barr_4</td>
+<td align="left">%</td>
+<td align="left">TNC Dams - Degree Barrier 4</td>
+<td align="left">TNC Dams dataset snapped to high res flowlines (Umass Land Eco Lab)</td>
+</tr>
+<tr class="odd">
+<td align="left">Human Impacts</td>
+<td align="left">deg_barr_5</td>
+<td align="left">%</td>
+<td align="left">TNC Dams - Degree Barrier 5</td>
+<td align="left">TNC Dams dataset snapped to high res flowlines (Umass Land Eco Lab)</td>
+</tr>
+<tr class="even">
+<td align="left">Human Impacts</td>
+<td align="left">deg_barr_6</td>
+<td align="left">%</td>
+<td align="left">TNC Dams - Degree Barrier 6</td>
+<td align="left">TNC Dams dataset snapped to high res flowlines (Umass Land Eco Lab)</td>
+</tr>
+<tr class="odd">
+<td align="left">Human Impacts</td>
+<td align="left">deg_barr_7</td>
+<td align="left">%</td>
+<td align="left">TNC Dams - Degree Barrier 7</td>
+<td align="left">TNC Dams dataset snapped to high res flowlines (Umass Land Eco Lab)</td>
+</tr>
+<tr class="even">
+<td align="left">Human Impacts</td>
+<td align="left">deg_barr_all</td>
+<td align="left">%</td>
+<td align="left">TNC Dams - All Degrees of Barrier</td>
+<td align="left">TNC Dams dataset snapped to high res flowlines (Umass Land Eco Lab)</td>
+</tr>
+<tr class="odd">
+<td align="left">Human Impacts</td>
+<td align="left">dep_no3_2011</td>
+<td align="left">kg/ha</td>
+<td align="left">Atmospheric Deposition of NO3 (2011 Total)</td>
+<td align="left">National Atmospheric Deposition Program (NADP)</td>
+</tr>
+<tr class="even">
+<td align="left">Human Impacts</td>
+<td align="left">dep_so4_2011</td>
+<td align="left">kg/ha</td>
+<td align="left">Atmospheric Deposition of SO4 (2011 Total)</td>
+<td align="left">National Atmospheric Deposition Program (NADP)</td>
+</tr>
+<tr class="odd">
+<td align="left">Topography</td>
+<td align="left">AreaSqKM</td>
+<td align="left">km2</td>
+<td align="left">Total Drainage Area</td>
+<td align="left">High Resolution Delineation</td>
+</tr>
+<tr class="even">
+<td align="left">Topography</td>
+<td align="left">elevation</td>
+<td align="left">m</td>
+<td align="left">Basin Elevation</td>
+<td align="left">National Elevation Dataset (NED) - processed by UMass</td>
+</tr>
+<tr class="odd">
+<td align="left">Topography</td>
+<td align="left">slope_pcnt</td>
+<td align="left">%</td>
+<td align="left">Basin Slope</td>
+<td align="left">National Elevation Dataset (NED) - processed by UMass</td>
+</tr>
+<tr class="even">
+<td align="left">Geology</td>
+<td align="left">drainageclass</td>
+<td align="left">Categorical Average (1-7)</td>
+<td align="left">Soil Drainage Class</td>
+<td align="left">USDA National Resources Conservation Sciences (NRCS) - Soil Survey Geographic Database (SSURGO)</td>
+</tr>
+<tr class="odd">
+<td align="left">Geology</td>
+<td align="left">hydrogroup_a</td>
+<td align="left">%</td>
+<td align="left">Soil Hydrologic Group A</td>
+<td align="left">USDA National Resources Conservation Sciences (NRCS) - Soil Survey Geographic Database (SSURGO)</td>
+</tr>
+<tr class="even">
+<td align="left">Geology</td>
+<td align="left">hydrogroup_ab</td>
+<td align="left">%</td>
+<td align="left">Soil Hydrologic Group A &amp; B</td>
+<td align="left">USDA National Resources Conservation Sciences (NRCS) - Soil Survey Geographic Database (SSURGO)</td>
+</tr>
+<tr class="odd">
+<td align="left">Geology</td>
+<td align="left">hydrogroup_cd</td>
+<td align="left">%</td>
+<td align="left">Soil Hydrologic Group C &amp;D</td>
+<td align="left">USDA National Resources Conservation Sciences (NRCS) - Soil Survey Geographic Database (SSURGO)</td>
+</tr>
+<tr class="even">
+<td align="left">Geology</td>
+<td align="left">hydrogroup_d1</td>
+<td align="left">%</td>
+<td align="left">Soil Hydrologic Group D (Only)</td>
+<td align="left">USDA National Resources Conservation Sciences (NRCS) - Soil Survey Geographic Database (SSURGO)</td>
+</tr>
+<tr class="odd">
+<td align="left">Geology</td>
+<td align="left">hydrogroup_d4</td>
+<td align="left">%</td>
+<td align="left">Soil Hydrologic Group D (All)</td>
+<td align="left">USDA National Resources Conservation Sciences (NRCS) - Soil Survey Geographic Database (SSURGO)</td>
+</tr>
+<tr class="even">
+<td align="left">Geology</td>
+<td align="left">percent_sandy</td>
+<td align="left">%</td>
+<td align="left">Percent Sandy</td>
+<td align="left">USDA National Resources Conservation Sciences (NRCS) - Soil Survey Geographic Database (SSURGO)</td>
+</tr>
+<tr class="odd">
+<td align="left">Geology</td>
+<td align="left">surfcoarse</td>
+<td align="left">%</td>
+<td align="left">Surficial Coarseness</td>
+<td align="left">USDA National Resources Conservation Sciences (NRCS) - Soil Survey Geographic Database (SSURGO)</td>
+</tr>
+<tr class="even">
+<td align="left">Climate</td>
+<td align="left">ann_tmax_c</td>
+<td align="left">degrees C</td>
+<td align="left">Average Maximum Annual Temperature</td>
+<td align="left">PRISM Climate Group</td>
+</tr>
+<tr class="odd">
+<td align="left">Climate</td>
+<td align="left">ann_tmin_c</td>
+<td align="left">degrees C</td>
+<td align="left">Average Minimum Annual Temperature</td>
+<td align="left">PRISM Climate Group</td>
+</tr>
+<tr class="even">
+<td align="left">Climate</td>
+<td align="left">apr_prcp_mm</td>
+<td align="left">mm</td>
+<td align="left">Average April Precipitation</td>
+<td align="left">PRISM Climate Group</td>
+</tr>
+<tr class="odd">
+<td align="left">Climate</td>
+<td align="left">aug_prcp_mm</td>
+<td align="left">mm</td>
+<td align="left">Average August Precipitation</td>
+<td align="left">PRISM Climate Group</td>
+</tr>
+<tr class="even">
+<td align="left">Climate</td>
+<td align="left">dec_prcp_mm</td>
+<td align="left">mm</td>
+<td align="left">Average December Precipitation</td>
+<td align="left">PRISM Climate Group</td>
+</tr>
+<tr class="odd">
+<td align="left">Climate</td>
+<td align="left">feb_prcp_mm</td>
+<td align="left">mm</td>
+<td align="left">Average February Precipitation</td>
+<td align="left">PRISM Climate Group</td>
+</tr>
+<tr class="even">
+<td align="left">Climate</td>
+<td align="left">jan_prcp_mm</td>
+<td align="left">mm</td>
+<td align="left">Average January Precipitation</td>
+<td align="left">PRISM Climate Group</td>
+</tr>
+<tr class="odd">
+<td align="left">Climate</td>
+<td align="left">jul_prcp_mm</td>
+<td align="left">mm</td>
+<td align="left">Average July Precipitation</td>
+<td align="left">PRISM Climate Group</td>
+</tr>
+<tr class="even">
+<td align="left">Climate</td>
+<td align="left">jun_prcp_mm</td>
+<td align="left">mm</td>
+<td align="left">Average June Precipitation</td>
+<td align="left">PRISM Climate Group</td>
+</tr>
+<tr class="odd">
+<td align="left">Climate</td>
+<td align="left">mar_prcp_mm</td>
+<td align="left">mm</td>
+<td align="left">Average March Precipitation</td>
+<td align="left">PRISM Climate Group</td>
+</tr>
+<tr class="even">
+<td align="left">Climate</td>
+<td align="left">may_prcp_mm</td>
+<td align="left">mm</td>
+<td align="left">Average May Precipitation</td>
+<td align="left">PRISM Climate Group</td>
+</tr>
+<tr class="odd">
+<td align="left">Climate</td>
+<td align="left">nov_prcp_mm</td>
+<td align="left">mm</td>
+<td align="left">Average November Precipitation</td>
+<td align="left">PRISM Climate Group</td>
+</tr>
+<tr class="even">
+<td align="left">Climate</td>
+<td align="left">oct_prcp_mm</td>
+<td align="left">mm</td>
+<td align="left">Average October Precipitation</td>
+<td align="left">PRISM Climate Group</td>
+</tr>
+<tr class="odd">
+<td align="left">Climate</td>
+<td align="left">sep_prcp_mm</td>
+<td align="left">mm</td>
+<td align="left">Average September Precipitation</td>
+<td align="left">PRISM Climate Group</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Documentation:</strong> The following spreadsheet contains a more detailed list of the covariates.</p>
+<ul>
+<li><a href="./downloads/EcoSHEDS%20NECD%20Covariates%20List.xlsx">EcoSHEDS NECD Covariates List.xlsx</a></li>
+</ul>
+<p><strong>Downloads:</strong> the covariate datasets are available for download in pre-staged HUC2 regions (corresponding to the <a href="catchment-delineation.html#catchment-delineation">Catchment Delineation</a> shapefiles)</p>
+<ul>
+<li><a href="https://ecosheds.s3.amazonaws.com/necd/covariates/covariates_01.zip">covariates_01.zip</a>: Region 01</li>
+<li><a href="https://ecosheds.s3.amazonaws.com/necd/covariates/covariates_02.zip">covariates_02.zip</a>: Region 02</li>
+<li><a href="https://ecosheds.s3.amazonaws.com/necd/covariates/covariates_03.zip">covariates_03.zip</a>: Region 03</li>
+<li><a href="https://ecosheds.s3.amazonaws.com/necd/covariates/covariates_04.zip">covariates_04.zip</a>: Region 04</li>
+<li><a href="https://ecosheds.s3.amazonaws.com/necd/covariates/covariates_05.zip">covariates_05.zip</a>: Region 05</li>
+<li><a href="https://ecosheds.s3.amazonaws.com/necd/covariates/covariates_06.zip">covariates_06.zip</a>: Region 06</li>
+</ul>
+<p>Each zip file contains four files:</p>
+<ul>
+<li><code>Catchments##.csv</code>: values computed over entire catchment polygons</li>
+<li><code>zonalStatsForDB_riparianBufferDetailed50ft_##.csv</code>: values computed within 50 ft riparian buffer</li>
+<li><code>zonalStatsForDB_riparianBufferDetailed100ft_##.csv</code>: values computed within 100 ft riparian buffer</li>
+<li><code>zonalStatsForDB_riparianBufferDetailed200ft_##.csv</code>: values computed within 200 ft riparian buffer</li>
+</ul>
+<p>Each csv file contains the following columns:</p>
+<table>
+<colgroup>
+<col width="11%" />
+<col width="88%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Column</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">featureid</td>
+<td align="left">catchment ID (joins to FEATUREID attribute in catchments shapefile)</td>
+</tr>
+<tr class="even">
+<td align="left">variable</td>
+<td align="left">variable name</td>
+</tr>
+<tr class="odd">
+<td align="left">value</td>
+<td align="left">value</td>
+</tr>
+<tr class="even">
+<td align="left">zone</td>
+<td align="left"><code>local</code> = value computed within catchment polygon<br><code>upstream</code> = value computed within this and all upstream catchments</td>
+</tr>
+<tr class="odd">
+<td align="left">riparian_distance_ft</td>
+<td align="left">riparian buffer distance (ft)<br>if <code>NA</code> then value computed over entire catchment, otherwise value is computed only within this distance from the flowlines</td>
+</tr>
+</tbody>
+</table>
 
 </div>
             </section>

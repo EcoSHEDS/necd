@@ -1,23 +1,23 @@
 # Downloads
 
-The following table lists the EcoSHEDS NECD data products that are available for download.
+The following table lists the EcoSHEDS NECD data products that are available for download. See the respective sections of this documentation for more details about each product download.
 
-| File                       | Description                         |
-| :---                       | :----------                         |
-| [spatial_01.zip]()         | Catchments, flowlines, boundary (Region 01)   |
-| [spatial_02.zip]()         | Catchments, flowlines, boundary (Region 02)   |
-| [spatial_03.zip]()         | Catchments, flowlines, boundary (Region 03)   |
-| [spatial_04.zip]()         | Catchments, flowlines, boundary (Region 04)   |
-| [spatial_05.zip]()         | Catchments, flowlines, boundary (Region 05)   |
-| [spatial_06.zip]()         | Catchments, flowlines, boundary (Region 06)   |
-| [covariates_01.zip]()      | Basin and riparian characteristics (Region 01)   |
-| [covariates_02.zip]()      | Basin and riparian characteristics (Region 02)   |
-| [covariates_03.zip]()      | Basin and riparian characteristics (Region 03)   |
-| [covariates_04.zip]()      | Basin and riparian characteristics (Region 04)   |
-| [covariates_05.zip]()      | Basin and riparian characteristics (Region 05)   |
-| [covariates_06.zip]()      | Basin and riparian characteristics (Region 06)   |
-| [impoundedZones100m.zip]() | Impoundment influence zones (100 m) |
-| [tidalZones.zip]()         | Tidal influence zones               |
+| File                       | Description                                    |
+| :---                       | :----------                                    |
+| [spatial_01.zip](`r paste0(base_url, "delineation/spatial_01.zip")`)         | Catchments, flowlines, boundary (Region 01)    |
+| [spatial_02.zip](`r paste0(base_url, "delineation/spatial_02.zip")`)         | Catchments, flowlines, boundary (Region 02)    |
+| [spatial_03.zip](`r paste0(base_url, "delineation/spatial_03.zip")`)         | Catchments, flowlines, boundary (Region 03)    |
+| [spatial_04.zip](`r paste0(base_url, "delineation/spatial_04.zip")`)         | Catchments, flowlines, boundary (Region 04)    |
+| [spatial_05.zip](`r paste0(base_url, "delineation/spatial_05.zip")`)         | Catchments, flowlines, boundary (Region 05)    |
+| [spatial_06.zip](`r paste0(base_url, "delineation/spatial_06.zip")`)         | Catchments, flowlines, boundary (Region 06)    |
+| [covariates_01.zip](`r paste0(base_url, "covariates/covariates_01.zip")`)      | Basin and riparian characteristics (Region 01) |
+| [covariates_02.zip](`r paste0(base_url, "covariates/covariates_02.zip")`)      | Basin and riparian characteristics (Region 02) |
+| [covariates_03.zip](`r paste0(base_url, "covariates/covariates_03.zip")`)      | Basin and riparian characteristics (Region 03) |
+| [covariates_04.zip](`r paste0(base_url, "covariates/covariates_04.zip")`)      | Basin and riparian characteristics (Region 04) |
+| [covariates_05.zip](`r paste0(base_url, "covariates/covariates_05.zip")`)      | Basin and riparian characteristics (Region 05) |
+| [covariates_06.zip](`r paste0(base_url, "covariates/covariates_06.zip")`)      | Basin and riparian characteristics (Region 06) |
+| [impoundedZones100m.zip](`r paste0(base_url, "impoundedZones100m.zip")`) | Impoundment influence zones (100 m)            |
+| [tidalZones.zip](`r paste0(base_url, "tidalZones.zip")`)         | Tidal influence zones                          |
 
 The map below shows the extent of each region for reference.
 

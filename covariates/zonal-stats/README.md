@@ -149,7 +149,7 @@ This process defines some layers that will be used in other sections and should 
   
   The script does the following:
     1. Reads the individual `.csv` files according to the `outputVariables` object. 
-    2. Converts each basin characteristic to the output units according to factors in the `Covariate Data Status - High Res Delineation.csv` file.
+    2. Converts each basin characteristic to the output units according to factors in the `EcoSHEDS NECD Covariates List.csv` file.
     3. Selects values below the `missingDataThreshold` and converts them to NA.
     4. Outputs an a long format dataframe for each zones shapefile. This file is saved to the `\completedStats` folder (e.g. `\zonalStatistics\versions\NHDHRDV2HRD\completedStats\zonalStatsForDB_Catchments01`).
   

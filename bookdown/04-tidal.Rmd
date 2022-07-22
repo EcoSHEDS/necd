@@ -12,4 +12,4 @@ The tidal influenced zones were created from the [U.S. Fish & Wildlife National 
 
 **Downloads:**
 
-- [tidalZones.zip](): shapefile of tidal influence zones
+- [tidalZones.zip](`r paste0(base_url, "tidalZones.zip")`): shapefile of tidal influence zones

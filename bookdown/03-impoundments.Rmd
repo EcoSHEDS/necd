@@ -17,4 +17,4 @@ The impoundment influence zones are used to identify stream temperature monitori
 
 **Downloads:**
 
-- [impoundedZones100m.zip](): shapefile of 100m impoundment influence zones
+- [impoundedZones100m.zip](`r paste0(base_url, "impoundedZones100m.zip")`): shapefile of 100m impoundment influence zones
