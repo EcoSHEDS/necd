@@ -100,10 +100,10 @@ for (region in 1:6) {
   x_tmax <- extract_daymet_param(shp_proj, opt$year, "tmax")
   x_tmin <- extract_daymet_param(shp_proj, opt$year, "tmin")
   x_prcp <- extract_daymet_param(shp_proj, opt$year, "prcp")
-  x_dayl <- extract_daymet_param(shp_proj, opt$year, "dayl")
-  x_srad <- extract_daymet_param(shp_proj, opt$year, "srad")
-  x_vp <- extract_daymet_param(shp_proj, opt$year, "vp")
-  x_swe <- extract_daymet_param(shp_proj, opt$year, "swe")
+  #x_dayl <- extract_daymet_param(shp_proj, opt$year, "dayl")
+  #x_srad <- extract_daymet_param(shp_proj, opt$year, "srad")
+  #x_vp <- extract_daymet_param(shp_proj, opt$year, "vp")
+  #x_swe <- extract_daymet_param(shp_proj, opt$year, "swe")
 
   cat("merging variables\n")
   x <- tibble(
@@ -112,10 +112,14 @@ for (region in 1:6) {
     tmax = x_tmax[["value"]],
     tmin = x_tmin[["value"]],
     prcp = x_prcp[["value"]],
-    dayl = x_dayl[["value"]],
-    srad = x_srad[["value"]],
-    vp = x_vp[["value"]],
-    swe = x_swe[["value"]]
+    #dayl = x_dayl[["value"]],
+    #srad = x_srad[["value"]],
+    #vp = x_vp[["value"]],
+    #swe = x_swe[["value"]]
+    dayl = NA_real_,
+    srad = NA_real_,
+    vp = NA_real_,
+    swe = NA_real_
   )
 
   if (file.exists(file_db)) {

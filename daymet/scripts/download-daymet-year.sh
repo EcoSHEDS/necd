@@ -10,8 +10,7 @@ DIR=$2
 
 BASE_URL=https://thredds.daac.ornl.gov/thredds/fileServer/ornldaac/2129
 
-#VARS="tmax tmin prcp dayl srad vp swe"
-VARS="tmax tmin prcp"
+VARS="tmax tmin prcp dayl srad vp swe"
 
 for VAR in $VARS; do
   URL=$BASE_URL/daymet_v4_daily_na_"$VAR"_"$YEAR".nc
